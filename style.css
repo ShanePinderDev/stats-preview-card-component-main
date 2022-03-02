@@ -1,0 +1,272 @@
+/*
+Visual scale 
+
+2.488rem/39.81px	A Visual Type Scale
+2.074rem/33.18px	A Visual Type Scale
+1.728rem/27.65px	A Visual Type Scale
+1.44rem/23.04px	A Visual Type Scale
+1.2rem/19.20px	A Visual Type Scale
+1rem/16.00px	A Visual Type Scale
+0.833rem/13.33px	A Visual Type Scale
+0.694rem/11.11px	A Visual Type Scale
+0.579rem/9.26px	A Visual Type Scale
+*/
+
+/* Box sizing rules */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Typography */
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  font-style: normal;
+  text-align: center;
+  color: #fff;
+  background-color: #090b1a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 32px;
+  margin-bottom: 1em;
+
+  /* margin; 0 auto; */
+}
+
+.heading span {
+  color: #ab5cdb;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 29px;
+}
+
+.companies-text,
+.templates-text,
+.queries-text {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 0.75rem;
+  line-height: 25px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Layout */
+
+.container {
+  height: 780px;
+  max-width: 327px;
+  background-color: #1b1938;
+  margin: 3em 1.5em 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.container-img {
+  background-image: linear-gradient(
+      rgba(170, 92, 219, 0.65),
+      rgba(170, 92, 219, 0.65)
+    ),
+    url("images/image-header-desktop.jpg");
+  mix-blend-mode: lighten;
+  height: 15em;
+  width: 20.438em;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 2.5em;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.container-inner {
+  max-width: 16.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 100%;
+  margin-bottom: 2.5em;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.info-text {
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 25px;
+  margin-bottom: 2.5em;
+}
+
+.companies-text {
+  margin-bottom: 1.5em;
+}
+
+.templates-text {
+  margin-bottom: 1.5em;
+}
+
+.queries-text {
+  margin-bottom: 2em;
+}
+
+.attribution {
+  font-size: 0.625rem;
+  text-align: center;
+}
+.attribution a {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.625rem;
+}
+
+@media (min-width: 1440px) {
+  .container {
+    height: 27.875em;
+    max-width: 69.375em;
+    flex-direction: row-reverse;
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 0px;
+    margin: 0;
+    margin-bottom: 1em;
+  }
+  .container-img {
+    height: 100%;
+    width: 33.75em;
+    margin-bottom: 0;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  .container-inner {
+    height: 27.875em;
+    max-width: 35.625em;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    text-align: left;
+    padding: 0 72px;
+  }
+
+  .heading {
+    width: 25.1875rem;
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 44px;
+    margin-bottom: 25px;
+  }
+  .info-text {
+    width: 23.375rem;
+    height: 75px;
+    margin-bottom: 4.5rem;
+  }
+  .add-info {
+    display: flex;
+    justify-content: flex-start;
+    width: 23.375rem;
+    gap: 3.8125rem;
+  }
+  .companies-text {
+    margin-bottom: 0.5625rem;
+  }
+
+  .templates-text {
+    margin-bottom: 0.5625rem;
+  }
+
+  .queries-text {
+    margin-bottom: 0.5625rem;
+  }
+}
