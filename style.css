@@ -150,20 +150,38 @@ h2 {
 }
 
 .container-img {
-  background-image: linear-gradient(
-      rgba(170, 92, 219, 0.65),
-      rgba(170, 92, 219, 0.65)
-    ),
-    url("images/image-header-desktop.jpg");
-  mix-blend-mode: lighten;
-  height: 15em;
+  height: 100%;
   width: 20.438em;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-bottom: 2.5em;
+  margin-bottom: 40px;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+}
+
+img {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  width: 100%;
+  height: 100%;
+}
+
+.filter img {
+  filter: opacity(1.2) saturate(0.42);
+}
+
+.filter {
+  position: relative;
+}
+
+.filter:after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #ab5cde;
+  mix-blend-mode: multiply;
 }
 
 .container-inner {
@@ -172,13 +190,6 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-img {
-  width: 100%;
-  margin-bottom: 2.5em;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
 }
 
 .info-text {
@@ -222,6 +233,11 @@ img {
     height: 100%;
     width: 33.75em;
     margin-bottom: 0;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  img {
     border-top-left-radius: 0px;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
